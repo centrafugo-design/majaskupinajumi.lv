@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mājaskūpinājumi</title>
+  <meta name="description" content="Mājaskūpinājumi – tradicionāli gatavoti kūpinājumi.">
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fdf6e3, #ffe4b5);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 900px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2.4em;
+      background: linear-gradient(45deg, #ff7a18, #ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin: 15px 0;
+      font-size: 1.05em;
+    }
+
+    .contacts {
+      margin-top: 25px;
+      font-size: 1.1em;
+    }
+
+    .contacts a {
+      color: #ff7a18;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>MĀJASKŪPINĀJUMI</h1>
+
+    <p>
+      Tradicionāli gatavoti kūpinājumi, ievērojot pārbaudītas receptes un nesteidzīgu kūpināšanas procesu.
+    </p>
+
+    <p>
+      Produkti tiek kūpināti nelielos apjomos, izmantojot oriģināli piemeklētu malku
+      un tradicionālos sālīšanas paņēmienus, gūstot mūsdienīgu rezultātu.
+    </p>
+
+    <p>Īsta garša bez liekas steigas.</p>
+
+    <div class="contacts">
+      📞 <a href="tel:+37126987327">+371 26987327</a><br>
+      🌐 <a href="https://www.facebook.com/kupinatavas.kupinajumi" target="_blank">Facebook</a>
+    </div>
+
+    <div class="gallery">
+      <a href="img/1.jpg"><img src="img/1.jpg" alt="Kūpinājums 1"></a>
+      <a href="img/2.jpg"><img src="img/2.jpg" alt="Kūpinājums 2"></a>
+      <a href="img/3.jpg"><img src="img/3.jpg" alt="Kūpinājums 3"></a>
+      <a href="img/4.jpg"><img src="img/4.jpg" alt="Kūpinājums 4"></a>
+    </div>
+
+    <footer>© 2026 majaskupinajumi.lv</footer>
+  </div>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
+  <script>
+    const lightbox = new SimpleLightbox('.gallery a', {
+      captionsData: 'alt',
+      captionDelay: 250
+    });
+  </script>
+
+</body>
+</html>
