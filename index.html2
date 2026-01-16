@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mājaskūpinājumi</title>
+  <meta name="description" content="Mājaskūpinājumi – tradicionāli kūpināti gaļas produkti.">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      /* Gradient fons */
+      background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px; /* Mazliet vietas mobilajām ierīcēm */
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px;
+      max-width: 700px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      margin-top: 0;
+      letter-spacing: 2px;
+      background: linear-gradient(45deg, #ff8c42, #ffb74d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    .contacts {
+      margin-top: 30px;
+      font-size: 1.1em;
+    }
+
+    .contacts a {
+      color: #ff8c42;
+      text-decoration: none;
+    }
+
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>MĀJASKŪPINĀJUMI</h1>
+
+    <p>
+      Tradicionāli gatavoti kūpinājumi,
+      ievērojot pārbaudītas receptes un nesteidzīgu kūpināšanas procesu.
+    </p>
+
+    <p>
+      Gaļas produkti tiek kūpināti nelielos apjomos,
+      izmantojot oriģināli piemeklētu malku
+      un veltot īpašu uzmanību pareizai tehnoloģijai.
+    </p>
+
+    <p>
+      Īsta garša bez liekas steigas.
+    </p>
+
+    <div class="contacts">
+      📞 <a href="tel:+37126987327">+371 26987327</a><br>
+      🌐 <a href="https://www.facebook.com/kupinatavas.kupinajumi" target="_blank">Facebook</a>
+    </div>
+
+    <!-- Galerija -->
+    <div class="gallery">
+      <a href="img/1.jpg" target="_blank"><img src="img/1.jpg" alt="Kūpinājums 1"></a>
+      <a href="img/2.jpg" target="_blank"><img src="img/2.jpg" alt="Kūpinājums 2"></a>
+      <a href="img/3.jpg" target="_blank"><img src="img/3.jpg" alt="Kūpinājums 3"></a>
+      <a href="img/4.jpg" target="_blank"><img src="img/4.jpg" alt="Kūpinājums 4"></a>
+    </div>
+
+    <footer>
+      © 2026 majaskupinajumi.lv
+    </footer>
+  </div>
+
+</body>
+</html>
