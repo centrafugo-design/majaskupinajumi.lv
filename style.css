@@ -73,3 +73,27 @@ footer a:hover {
         font-size: 1.2rem;
     }
 }
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* mobilajās ierīcēs bildes tiks uz nākamo rindu */
+    gap: 10px; /* attālums starp bildēm */
+    justify-content: center; /* centrē galeriju horizontāli */
+}
+
+.gallery img {
+    width: 30%; /* 3 bildes vienā rindā lielajos ekrānos */
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 45%; /* 2 bildes rindā planšetēs */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        width: 100%; /* 1 bilde rindā telefonos */
+    }
+}
