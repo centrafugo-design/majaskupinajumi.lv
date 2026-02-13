@@ -28,8 +28,11 @@ section {padding:60px 10%; position:relative;}
 }
 .hero h1 { font-size:48px; color:#ffd6d6; margin-bottom:20px; opacity:0; animation:fadeIn 1s forwards; }
 .hero p { font-size:20px; max-width:900px; margin:0 auto 30px; opacity:0; animation:fadeIn 1.5s forwards; }
-.hero .btn { display:inline-block; background:#8c1f2f; padding:16px 35px; color:white; font-size:18px; font-weight:700; border-radius:6px; transition:0.3s; opacity:0; animation:fadeIn 2s forwards; }
-.hero .btn:hover { background:#a32a3c; transform:scale(1.05); }
+
+/* BUTTONS */
+.btn { display:inline-block; padding:16px 35px; font-size:18px; font-weight:700; border-radius:6px; transition:0.3s; opacity:0; animation:fadeIn 2s forwards; }
+.btn-whatsapp { background:#25d366; color:white; }
+.btn-whatsapp:hover { background:#1ebe57; transform:scale(1.05); }
 
 /* ANIMATIONS */
 @keyframes fadeIn {
@@ -41,7 +44,7 @@ section {padding:60px 10%; position:relative;}
 #about { display:flex; flex-wrap:wrap; align-items:center; gap:30px; margin-top:30px; }
 #about img { border-radius:12px; max-width:320px; box-shadow:0 0 20px rgba(0,0,0,0.6); transition:0.3s; }
 #about img:hover { transform:scale(1.03); }
-#about .text { flex:1; }
+#about .text { flex:1; font-size:18px; line-height:1.6; }
 #about h2 { font-size:38px; color:#ffb3b3; }
 
 /* SERVICES */
@@ -81,7 +84,7 @@ footer { background:#120406; padding:30px; text-align:center; font-size:14px; co
 <section class="hero">
 <h1>Konsultācijas gaļas pārstrādātājiem</h1>
 <p>No hobija līmeņa līdz mazajiem uzņēmumiem. Palīdzu mājražotājiem un maziem uzņēmumiem izstrādāt gardus kūpinājumus, desas un konservus, saglabājot autentisko, klasisko gaļas produktu garšu un struktūru.</p>
-<a class="btn" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
+<a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
 </section>
 
 <!-- ABOUT -->
@@ -130,7 +133,7 @@ footer { background:#120406; padding:30px; text-align:center; font-size:14px; co
 <section id="contact">
 <h2>Sazinies ar tehnologu</h2>
 <p>Raksti WhatsApp vai e-pastā un apraksti savu projektu vai problēmu.</p>
-<a class="btn" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
+<a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
 </section>
 
 <footer>
@@ -140,3 +143,4 @@ footer { background:#120406; padding:30px; text-align:center; font-size:14px; co
 
 </body>
 </html>
+
