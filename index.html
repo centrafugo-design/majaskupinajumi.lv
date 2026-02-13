@@ -12,24 +12,30 @@ body { margin:0; font-family:Inter, sans-serif; background:#2b0f12; color:#f5f5f
 h1,h2,h3 { font-family:"Playfair Display", serif; letter-spacing:0.5px; margin-bottom:15px; }
 a{text-decoration:none;}
 section {padding:60px 10%; position:relative;}
-.btn { display:inline-block; background:#8c1f2f; padding:16px 35px; color:white; font-size:18px; font-weight:700; border-radius:6px; transition:0.3s; }
-.btn:hover { background:#a32a3c; transform:scale(1.05); }
-
-/* ANIMATIONS */
-.fade-in { opacity:0; transform:translateY(30px); animation:fadeIn 1s forwards; }
-.fade-in-delay-1 { animation-delay:0.2s; }
-.fade-in-delay-2 { animation-delay:0.4s; }
-.fade-in-delay-3 { animation-delay:0.6s; }
-
-@keyframes fadeIn {
-  to { opacity:1; transform:translateY(0); }
-}
 
 /* HERO */
-.hero { background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('img/hero-smoke.jpg'); background-size:cover; background-position:center; text-align:center; padding:120px 10%; }
-.hero h1 { font-size:48px; color:#ffd6d6; margin-bottom:20px; animation:fadeIn 1s forwards; }
-.hero p { font-size:20px; max-width:900px; margin:auto 0 30px; animation:fadeIn 1.2s forwards; }
-.hero .btn { animation:fadeIn 1.4s forwards; }
+.hero {
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('img/hero-smoke.jpg');
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  padding:0 10%;
+}
+.hero h1 { font-size:48px; color:#ffd6d6; margin-bottom:20px; opacity:0; animation:fadeIn 1s forwards; }
+.hero p { font-size:20px; max-width:900px; margin:0 auto 30px; opacity:0; animation:fadeIn 1.5s forwards; }
+.hero .btn { display:inline-block; background:#8c1f2f; padding:16px 35px; color:white; font-size:18px; font-weight:700; border-radius:6px; transition:0.3s; opacity:0; animation:fadeIn 2s forwards; }
+.hero .btn:hover { background:#a32a3c; transform:scale(1.05); }
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  0% { opacity:0; transform:translateY(20px);}
+  100% { opacity:1; transform:translateY(0);}
+}
 
 /* ABOUT */
 #about { display:flex; flex-wrap:wrap; align-items:center; gap:30px; margin-top:30px; }
@@ -55,9 +61,8 @@ section {padding:60px 10%; position:relative;}
 .gallery img:hover { transform:scale(1.05); filter:brightness(1.1); }
 
 /* CONTACT */
-form input, form textarea { width:100%; padding:12px; margin:8px 0; border-radius:6px; border:none; font-size:16px; }
-form button { background:#ff4444; padding:14px 28px; border:none; font-size:16px; font-weight:bold; color:white; border-radius:6px; cursor:pointer; transition:0.3s; }
-form button:hover { background:#ff6b6b; transform:scale(1.03); }
+#contact { text-align:center; }
+#contact .btn { margin-top:20px; }
 
 /* FOOTER */
 footer { background:#120406; padding:30px; text-align:center; font-size:14px; color:#ccc; margin-top:40px; }
@@ -74,13 +79,13 @@ footer { background:#120406; padding:30px; text-align:center; font-size:14px; co
 
 <!-- HERO -->
 <section class="hero">
-<h1 class="fade-in">Konsultācijas gaļas pārstrādātājiem</h1>
-<p class="fade-in fade-in-delay-1">No hobija līmeņa līdz mazajiem uzņēmumiem. Palīdzu mājražotājiem un maziem uzņēmumiem izstrādāt gardus kūpinājumus, desas un konservus, saglabājot autentisko, klasisko gaļas produktu garšu un struktūru.</p>
-<a class="btn fade-in fade-in-delay-2" href="#contact">Raksti konsultācijai</a>
+<h1>Konsultācijas gaļas pārstrādātājiem</h1>
+<p>No hobija līmeņa līdz mazajiem uzņēmumiem. Palīdzu mājražotājiem un maziem uzņēmumiem izstrādāt gardus kūpinājumus, desas un konservus, saglabājot autentisko, klasisko gaļas produktu garšu un struktūru.</p>
+<a class="btn" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade-in fade-in-delay-1">
+<section id="about">
 <img src="img/avars-hero.jpg" alt="Aivars Rudzītis">
 <div class="text">
 <h2>Par mani</h2>
@@ -90,44 +95,42 @@ footer { background:#120406; padding:30px; text-align:center; font-size:14px; co
 
 <!-- SERVICES -->
 <section>
-<h2 class="fade-in fade-in-delay-1">Konsultāciju virzieni</h2>
+<h2>Konsultāciju virzieni</h2>
 <div class="grid">
-<div class="card fade-in fade-in-delay-1"><h3>Produktu izstrāde</h3><p>Receptūras, garšvielas, mājražotāju un kraft produktu idejas.</p></div>
-<div class="card fade-in fade-in-delay-2"><h3>Kūpināšanas tehnoloģijas</h3><p>Karstā/aukstā kūpināšana, sālīšana, marinēšana, dūmu ģenerācijas iespējas.</p></div>
-<div class="card fade-in fade-in-delay-3"><h3>Konservu ražošana</h3><p>Gaļas konservi mājražotājiem, sterilizācijas pamati, iepakojuma idejas.</p></div>
-<div class="card fade-in fade-in-delay-1"><h3>Ražošanas process</h3><p>Iekārtu izvēle, procesa optimizācija, kļūdu analīze.</p></div>
-<div class="card fade-in fade-in-delay-2"><h3>HACCP un drošība</h3><p>Paškontroles sistēmas un drošības pamati.</p></div>
-<div class="card fade-in fade-in-delay-3"><h3>Individuālas konsultācijas</h3><p>WhatsApp, Zoom vai klātienē – draudzīgs un saprotams skaidrojums.</p></div>
+<div class="card"><h3>Produktu izstrāde</h3><p>Receptūras, garšvielas, mājražotāju un kraft produktu idejas.</p></div>
+<div class="card"><h3>Kūpināšanas tehnoloģijas</h3><p>Karstā/aukstā kūpināšana, sālīšana, marinēšana, dūmu ģenerācijas iespējas.</p></div>
+<div class="card"><h3>Konservu ražošana</h3><p>Gaļas konservi mājražotājiem, sterilizācijas pamati, iepakojuma idejas.</p></div>
+<div class="card"><h3>Ražošanas process</h3><p>Iekārtu izvēle, procesa optimizācija, kļūdu analīze.</p></div>
+<div class="card"><h3>HACCP un drošība</h3><p>Paškontroles sistēmas un drošības pamati.</p></div>
+<div class="card"><h3>Individuālas konsultācijas</h3><p>WhatsApp, Zoom vai klātienē – draudzīgs un saprotams skaidrojums.</p></div>
 </div>
 </section>
 
 <!-- PRICING -->
 <section>
-<h2 class="fade-in fade-in-delay-1">Cenas</h2>
+<h2>Cenas</h2>
 <div class="grid">
-<div class="pricing fade-in fade-in-delay-1"><h3>Ātra WhatsApp konsultācija</h3><p>30 €</p></div>
-<div class="pricing fade-in fade-in-delay-2"><h3>Konsultācija + konkrēta problēma</h3><p>60 €</p></div>
-<div class="pricing fade-in fade-in-delay-3"><h3>Individuāla receptūra / tehnoloģija</h3><p>120–150 €</p></div>
+<div class="pricing"><h3>Ātra WhatsApp konsultācija</h3><p>30 €</p></div>
+<div class="pricing"><h3>Konsultācija + konkrēta problēma</h3><p>60 €</p></div>
+<div class="pricing"><h3>Individuāla receptūra / tehnoloģija</h3><p>120–150 €</p></div>
 </div>
 </section>
 
 <!-- GALLERY -->
 <section>
-<h2 class="fade-in fade-in-delay-1">Ražošanas foto</h2>
+<h2>Ražošanas foto</h2>
 <div class="gallery">
-<img src="img/photo1.jpg" alt="Ražošanas telpas" class="fade-in fade-in-delay-1">
-<img src="img/photo2.jpg" alt="Produkti un konservi" class="fade-in fade-in-delay-2">
-<img src="img/photo3.jpg" alt="Kūpināšanas process" class="fade-in fade-in-delay-3">
+<img src="img/photo1.jpg" alt="Ražošanas telpas">
+<img src="img/photo2.jpg" alt="Produkti un konservi">
+<img src="img/photo3.jpg" alt="Kūpināšanas process">
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2 class="fade-in fade-in-delay-1">Sazinies ar tehnologu</h2>
-<p class="fade-in fade-in-delay-2">Raksti WhatsApp vai e-pastā un apraksti savu projektu vai problēmu.</p>
-<p class="fade-in fade-in-delay-3"><b>WhatsApp:</b> +371 26987327</p>
-<p class="fade-in fade-in-delay-3"><b>E-pasts:</b> iesmi@inbox.lv</p>
-<a class="btn fade-in fade-in-delay-3" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
+<h2>Sazinies ar tehnologu</h2>
+<p>Raksti WhatsApp vai e-pastā un apraksti savu projektu vai problēmu.</p>
+<a class="btn" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
 </section>
 
 <footer>
