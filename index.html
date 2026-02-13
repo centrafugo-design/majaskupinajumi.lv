@@ -1,33 +1,231 @@
+<!DOCTYPE html>
+<html lang="lv">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Konsultācijas</title>
+<title>Profesionālas gaļas pārstrādes konsultācijas | IK IESMI</title>
 
 <style>
 body {
-  font-family: Arial;
-  background: #800000;
-  font-size: 30px;
+  font-family: Arial, sans-serif;
   margin: 0;
+  background: #800000;
+  font-size: 22px;
+  line-height: 1.6;
 }
 
+/* HERO */
 .hero {
   background: #800000;
   color: white;
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.hero h1 { font-size: 70px; }
-.hero p { font-size: 34px; }
-
-main {
-  background: white;
-  padding: 40px;
-  max-width: 1000px;
-  margin: auto;
+.hero h1 {
+  font-size: 58px;
+  margin-bottom: 10px;
 }
 
-h2 { font-size: 40px; color: #800000; }
+.hero p {
+  font-size: 28px;
+  max-width: 900px;
+  margin: 15px auto;
+}
+
+.hero img {
+  width: 200px;
+  border-radius: 50%;
+  border: 4px solid #25D366;
+  margin-top: 20px;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 18px 40px;
+  font-size: 26px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* CONTENT BOX */
+main {
+  background: white;
+  max-width: 1100px;
+  margin: -40px auto 0 auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+h2 {
+  font-size: 40px;
+  color: #800000;
+}
+
+ul {
+  font-size: 22px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid #800000;
+}
+
+/* PRICES */
+.price-box {
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 12px;
+  font-size: 24px;
+}
+
+/* FAQ */
+details {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+}
+
+/* FLOAT WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  z-index: 9999;
+}
+
+.whatsapp-float img {
+  width: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  body { font-size: 20px; }
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 22px; }
+  main { margin: 0; border-radius: 0; box-shadow: none; padding: 20px; }
+  .gallery img { width: 100%; }
+}
 </style>
 </head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Profesionālas gaļas pārstrādes konsultācijas</h1>
+  <p>Palīdzu mājražotājiem, medniekiem un hobija kūpinātājiem panākt maksimālu kvalitāti mājas vai uzņēmuma apstākļos.</p>
+  <p>Izveidoju oriģinālus zīmola produktus, garšvielu kombinācijas un HACCP dokumentāciju.</p>
+
+  <!-- TAVS FOTO -->
+  <img src="img/tehnologs.jpg" alt="Pārtikas tehnologs">
+
+  <br>
+  <a class="cta" href="https://wa.me/37126987327">Raksti tehnologam WhatsApp</a>
+</div>
+
+<main>
+
+<!-- SERVICES -->
+<h2>Konsultācijas pakalpojumi</h2>
+<ul>
+<li>Desu un kūpinājumu receptūras, tehnoloģiskie apraksti soli pa solim</li>
+<li>Aukstā un karstā kūpināšana</li>
+<li>Sālīšanas un kūpināšanas tehnoloģijas</li>
+<li>Garšvielu, piedevu un apvalku izvēle</li>
+<li>Marinādes</li>
+<li>Kļūdu analīze</li>
+<li>Iekārtu un procesu optimizācija, kūpinātavu būvniecības ieteikumi</li>
+<li>Rekomendācijas kur un ko iegādāties</li>
+<li>Iepakojumu materiālu izvēle</li>
+<li>Konsultācijas sava uzņēmuma izveidošanai</li>
+</ul>
+
+<!-- PRICES -->
+<h2>Cenas</h2>
+<div class="price-box">
+<p>WhatsApp konsultācija (30 min) – <b>30 €</b></p>
+<p>Konkrētas problēmas analīze – <b>20 €</b></p>
+<p>Individuāla receptūra – <b>no 100 €</b></p>
+</div>
+
+<p><a class="cta" href="https://wa.me/37126987327">Uzdot jautājumu tehnologam</a></p>
+
+<!-- TRUST -->
+<h2>Kāpēc man uzticēties</h2>
+<p>Esmu pārtikas tehnologs ar vairāk kā 30 gadu praktisku pieredzi gaļas produktu pārstrādē un kūpināšanā. Strādājis ar rūpnieciskām un mājas tehnoloģijām, receptūrām, piedevām un iekārtām. Sniedzu praktiskus, pārbaudītus risinājumus bez mītiem.</p>
+
+<!-- GALLERY -->
+<h2>Ražošanas piemēri</h2>
+<div class="gallery">
+  <img src="img/kupinata_gaļa1.jpg">
+  <img src="img/kupinata_gaļa2.jpg">
+  <img src="img/desas.jpg">
+</div>
+
+<!-- FAQ -->
+<h2>Biežāk uzdotie jautājumi</h2>
+
+<details>
+<summary>Kā notiek konsultācija?</summary>
+<p>Konsultācija notiek WhatsApp čatā vai balss zvanā. Tu nosūti foto/video, es sniedzu tehnoloģisku risinājumu.</p>
+</details>
+
+<details>
+<summary>Kā notiek apmaksa?</summary>
+<p>Apmaksa ar bankas pārskaitījumu pēc rēķina (IK IESMI).</p>
+</details>
+
+<details>
+<summary>Vai konsultācijas ir piemērotas mājražotājiem?</summary>
+<p>Jā. Konsultācijas paredzētas gan hobija kūpinātājiem, gan mājražotājiem.</p>
+</details>
+
+<!-- FREE TIPS -->
+<h2>Bezmaksas profesionāli padomi</h2>
+<p>Dalīšos ar praktiskiem padomiem par kūpināšanu, desām un pārtikas tehnoloģiju. Sekojiet jaunumiem un rakstiet jautājumus.</p>
+
+</main>
+
+<footer>
+<p>© 2026 IK IESMI | majaskupinajumi.lv</p>
+<p>WhatsApp: +371 26987327 | e-pasts: iesmi@inbox.lv</p>
+<p>Facebook: facebook.com/kupinatavas.kupinajumi</p>
+</footer>
+
+<!-- FLOAT WHATSAPP ICON -->
+<a class="whatsapp-float" href="https://wa.me/37126987327">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+</body>
+</html>
