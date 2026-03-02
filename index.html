@@ -3,14 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Konsultācijas gaļas pārstrādātājiem | Aivars Rudzītis</title>
+<meta name="description" content="Konsultācijas gaļas pārstrādātājiem un mājražotājiem. Kūpinājumi, desas, konservi, receptūras, HACCP. 30+ gadu pieredze pārtikas tehnoloģijā.">
+<meta name="keywords" content="kūpinājumi, gaļas pārstrāde, mājražotāji, pārtikas tehnologs, desu receptes, HACCP, konsultācijas">
+<meta name="author" content="Aivars Rudzītis">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph priekš Facebook -->
+<meta property="og:title" content="Konsultācijas gaļas pārstrādātājiem | Aivars Rudzītis">
+<meta property="og:description" content="Palīdzu mājražotājiem izstrādāt kvalitatīvus kūpinājumus, desas un konservus.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://majaskupinajumi.lv">
+<meta property="og:image" content="https://majaskupinajumi.lv/img/logo.jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body { margin:0; font-family:Inter, sans-serif; background:#2b0f12; color:#f5f5f5;}
 h1,h2,h3 { font-family:"Playfair Display", serif; margin-bottom:15px; }
-a{text-decoration:none;}
+a{text-decoration:none; color:#ffd6d6;}
+a:hover{ text-decoration:underline; }
 section {padding:60px 10%;}
 
 /* HERO */
@@ -51,7 +64,36 @@ section {padding:60px 10%;}
 .gallery img { width:100%; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.6); }
 
 /* FOOTER */
-footer { background:#120406; padding:25px; text-align:center; font-size:14px; color:#aaa; }
+footer { 
+  background:#120406; 
+  padding:40px 10%; 
+  text-align:center; 
+  font-size:15px; 
+  color:#ccc; 
+}
+
+.footer-social {
+  margin-top:15px;
+}
+
+.footer-social a {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600;
+  font-size:16px;
+}
+
+.footer-social svg {
+  width:22px;
+  height:22px;
+  fill:#ffd6d6;
+  transition:0.3s;
+}
+
+.footer-social a:hover svg {
+  fill:#ffffff;
+}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -60,20 +102,35 @@ footer { background:#120406; padding:25px; text-align:center; font-size:14px; co
 #about{flex-direction:column;}
 }
 </style>
+
+<!-- Strukturētie dati Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aivars Rudzītis",
+  "jobTitle": "Pārtikas tehnologs",
+  "url": "https://majaskupinajumi.lv",
+  "sameAs": [
+    "https://www.facebook.com/kupinatavas.kupinajumi"
+  ]
+}
+</script>
+
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <h1>Konsultācijas gaļas pārstrādātājiem</h1>
   <p>No hobija līmeņa līdz mazajiem uzņēmumiem. Palīdzu mājražotājiem izstrādāt kūpinājumus, desas un konservus ar autentisku klasisko garšu.</p>
 
-  <a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
+  <a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju" target="_blank">
+    Raksti WhatsApp
+  </a>
 
   <img class="hero-logo" src="img/logo.jpg" alt="IESMI logo">
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <img src="img/aivars.jpg" alt="Aivars Rudzītis">
   <div class="text">
@@ -82,7 +139,6 @@ footer { background:#120406; padding:25px; text-align:center; font-size:14px; co
   </div>
 </section>
 
-<!-- SERVICES -->
 <section>
 <h2>Konsultāciju virzieni</h2>
 <div class="grid">
@@ -95,7 +151,6 @@ footer { background:#120406; padding:25px; text-align:center; font-size:14px; co
 </div>
 </section>
 
-<!-- PRICES -->
 <section>
 <h2>Cenas</h2>
 <div class="grid">
@@ -105,7 +160,6 @@ footer { background:#120406; padding:25px; text-align:center; font-size:14px; co
 </div>
 </section>
 
-<!-- PHOTOS -->
 <section>
 <div class="gallery">
   <img src="img/photo1.jpg" alt="">
@@ -114,19 +168,26 @@ footer { background:#120406; padding:25px; text-align:center; font-size:14px; co
 </div>
 </section>
 
-<!-- CONTACT -->
 <section style="text-align:center;">
 <h2>Sazināties</h2>
-<a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
+<a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju" target="_blank">
+  Raksti WhatsApp
+</a>
 </section>
 
 <footer>
 © 2026 Aivars Rudzītis | IK IESMI | majaskupinajumi.lv  
-<br>Facebook: facebook.com/kupinatavas.kupinajumi
+
+<div class="footer-social">
+  <a href="https://www.facebook.com/kupinatavas.kupinajumi" target="_blank">
+    <svg viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 10-11.6 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0022 12z"/>
+    </svg>
+    Sekot Facebook
+  </a>
+</div>
+
 </footer>
 
 </body>
 </html>
-
-
-
