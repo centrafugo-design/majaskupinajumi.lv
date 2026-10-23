@@ -1,196 +1,225 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mājas kūpinājumi – aukstā kūpināšana, receptes un konsultācijas</title>
-<meta name="description" content="Mājas kūpinājumi Latvijā – aukstā kūpināšana, receptes un tehnoloģija. Konsultācijas mājražotājiem par kūpināšanu, desām un konserviem.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pārdošanā majaskupinajumi.lv — atmiņā paliekošs domēna vārds ar potenciālu Latvijas kūpinājumu un mājražotāju tirgū.">
+    <meta name="robots" content="index, follow">
+    <title>majaskupinajumi.lv — Domēns tiek pārdots</title>
 
-<!-- Favicon -->
-<link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #171b18;
+            color: #f8f5ee;
+            line-height: 1.6;
+        }
 
-<!-- Strukturētie dati JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "IK IESMI | Aivars Rudzītis",
-  "image": "https://majaskupinajumi.lv/img/logo.jpg",
-  "@id": "https://majaskupinajumi.lv/",
-  "url": "https://majaskupinajumi.lv/",
-  "telephone": "+37126987327",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Kreimeņu iela 4-30",
-    "addressLocality": "Rīga",
-    "postalCode": "LV-1015",
-    "addressCountry": "LV"
-  },
-  "description": "Mājas kūpinājumi – aukstā kūpināšana, tehnoloģija, receptes un konsultācijas mājražotājiem. Pieredzējis pārtikas tehnologs palīdz radīt kvalitatīvus kūpinājumus, desas un konservus.",
-  "sameAs": [
-    "https://www.facebook.com/kupinatavas.kupinajumi"
-  ]
-}
-</script>
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background:
+                radial-gradient(ellipse at top, #394437 0%, #202820 45%, #121512 100%);
+        }
 
-<!-- CSS -->
-<style>
-body { margin:0; font-family:Inter, sans-serif; background:#2b0f12; color:#f5f5f5;}
-h1,h2,h3 { font-family:"Playfair Display", serif; margin-bottom:15px; }
-a{text-decoration:none;}
-section {padding:60px 10%;}
+        .container {
+            width: 100%;
+            max-width: 850px;
+            text-align: center;
+            padding: 55px 35px;
+            border: 1px solid rgba(220, 185, 119, 0.35);
+            border-radius: 18px;
+            background: rgba(15, 19, 16, 0.62);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+        }
 
-/* HERO */
-.hero {
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85));
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  min-height:90vh;
-}
-.hero h1 { font-size:46px; color:#ffd6d6; }
-.hero p { font-size:20px; max-width:900px; }
+        .eyebrow {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid #c6a66b;
+            border-radius: 30px;
+            color: #e5c78f;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-/* BUTTON */
-.btn { padding:16px 32px; font-size:18px; font-weight:700; border-radius:6px; display:inline-block; margin-top:20px;}
-.btn-whatsapp { background:#25d366; color:white; }
-.btn-whatsapp:hover { background:#1ebe57; }
+        h1 {
+            margin: 28px 0 10px;
+            font-size: clamp(34px, 7vw, 66px);
+            line-height: 1.1;
+            overflow-wrap: anywhere;
+            color: #fffaf0;
+        }
 
-/* LOGO */
-.hero-logo { max-width:180px; margin-top:25px; }
+        .subtitle {
+            margin: 20px auto;
+            max-width: 650px;
+            font-size: clamp(18px, 3vw, 23px);
+            color: #d8d9ce;
+        }
 
-/* ABOUT */
-#about { display:flex; flex-wrap:wrap; align-items:center; gap:40px; }
-#about img { max-width:320px; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.6); }
-#about .text { flex:1; font-size:18px; line-height:1.6; }
+        .highlight {
+            color: #e5c78f;
+        }
 
-/* SERVICES */
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card { background:#3a1216; padding:20px; border-radius:12px; }
+        .description {
+            max-width: 620px;
+            margin: 25px auto;
+            color: #c2c8be;
+            font-size: 16px;
+        }
 
-/* PRICES */
-.pricing { background:#8c1f2f; padding:20px; border-radius:12px; text-align:center; }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 38px 0;
+        }
 
-/* GALLERY */
-.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:15px; }
-.gallery img { width:100%; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.6); }
+        .benefit {
+            padding: 20px 12px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-/* FOOTER */
-footer { background:#120406; padding:25px; text-align:center; font-size:14px; color:#aaa; }
+        .benefit .icon {
+            display: block;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
 
-/* MOBILE */
-@media(max-width:768px){
-.hero h1{font-size:32px;}
-.hero p{font-size:18px;}
-#about{flex-direction:column;}
-}
-</style>
+        .benefit strong {
+            display: block;
+            color: #f0d5a3;
+            font-size: 15px;
+        }
+
+        .benefit span:last-child {
+            display: block;
+            margin-top: 6px;
+            color: #b9c0b6;
+            font-size: 13px;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 16px 32px;
+            border-radius: 8px;
+            background: #c6a66b;
+            color: #171b18;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta:hover {
+            background: #e5c78f;
+            transform: translateY(-2px);
+        }
+
+        .note {
+            margin-top: 22px;
+            color: #9fa79c;
+            font-size: 13px;
+        }
+
+        footer {
+            padding: 18px;
+            text-align: center;
+            color: #7f897f;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 38px 20px;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <main class="hero">
+        <section class="container">
+            <span class="eyebrow">Unikāla iespēja uzņēmējiem</span>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Mājas kūpinājumi – profesionāļa skatījums no ķēķa puses</h1>
-  <p>Mājas kūpinājumi Latvijā kļūst arvien populārāki. Daudzi mājražotāji vēlas radīt kvalitatīvus kūpinājumus – speķi, desas un kūpinātu gaļu ar autentisku garšu. Aukstā kūpināšana ļauj saglabāt tekstūru un iegūt bagātīgu dūmu aromātu.</p>
+            <h1>majaskupinajumi<span class="highlight">.lv</span></h1>
 
-  <a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
+            <p class="subtitle">
+                <span class="highlight">Šis domēna vārds tiek pārdots.</span><br>
+                Iegūsti savu vietu Latvijas kūpinājumu tirgū!
+            </p>
 
-  <img class="hero-logo" src="img/logo.jpg" alt="IESMI logo">
-</section>
+            <p class="description">
+                Mājas kūpinājumi, tradicionālas garšas un vietējo ražotāju
+                produkti ir lieliska niša zīmolam ar skaidru vēstījumu.
+                <strong>majaskupinajumi.lv</strong> ir viegli saprotams,
+                konkrētai nozarei atbilstošs domēna vārds ar potenciālu
+                kļūt par pamatu Tavam nākamajam biznesam internetā.
+            </p>
 
-<!-- ABOUT -->
-<section id="about">
-  <img src="img/aivars.jpg" alt="Aivars Rudzītis, pārtikas tehnologs">
-  <div class="text">
-    <h2>Par mani</h2>
-    <p>Esmu pārtikas tehnologs Aivars Rudzītis ar vairāk nekā 30 gadu pieredzi gaļas pārstrādē. Strādāju ar kūpinājumiem, desām un gaļas konserviem gan rūpniecībā, gan ar mājražotājiem.</p>
-    <p>Ja interesē mājas kūpinājumi, kūpināšanas tehnoloģija vai produkti – varu palīdzēt ar praktisku pieredzi un tehnoloģiskiem risinājumiem. Konsultēju gan hobija līmeņa kūpinātājus, gan mazos ražotājus.</p>
-  </div>
-</section>
+            <div class="benefits">
+                <div class="benefit">
+                    <span class="icon">🎯</span>
+                    <strong>Precīza niša</strong>
+                    <span>Domēns uzreiz pasaka, par ko ir Tavs bizness.</span>
+                </div>
 
-<!-- SEO raksts par auksto kūpināšanu -->
-<section>
-<h2>Mājas kūpinājumi – aukstā kūpināšana</h2>
+                <div class="benefit">
+                    <span class="icon">🇱🇻</span>
+                    <strong>Latvijas tirgum</strong>
+                    <span>Vietējam tirgum piemērots .lv domēns.</span>
+                </div>
 
-<p>Aukstā kūpināšana ir sena tradīcija, kas ļauj iegūt aromātisku gaļu, desas un speķi bez ķīmijas. Tā notiek zemā temperatūrā (20–30°C), dūmi aromatizē produktus, saglabājot tekstūru un ilgāku uzglabāšanu.</p>
+                <div class="benefit">
+                    <span class="icon">💡</span>
+                    <strong>Biznesa potenciāls</strong>
+                    <span>E-veikalam, mājražotājam vai pārtikas zīmolam.</span>
+                </div>
+            </div>
 
-<h3>Kā sagatavot gaļu</h3>
-<ul>
-<li><strong>Sāls un marināde:</strong> iemasē gaļu ar sāli vai marinādi, lai nodrošinātu garšu un ilgāku uzglabāšanas laiku.</li>
-<li><strong>Žāvēšana:</strong> pēc sāls vai marinādes gaļu atstāj gaisā, lai veidotos sausais slānis dūmu pieķeršanai.</li>
-<li><strong>Dūmu izvēle:</strong> izmanto cietkoksnes malku – bērzu, ābeli vai ozolu.</li>
-</ul>
+            <p class="description">
+                Vai meklē piemērotu domēna vārdu savam uzņēmumam?
+                Šī ir iespēja iegādāties domēnu bez mājaslapas,
+                satura vai cita biznesa pārņemšanas.
+            </p>
 
-<h3>Dūmu temperatūra un laiks</h3>
-<p>Temperatūra nepārsniedz 30°C, kūpināšanas laiks ilgst 4–12 stundas, atkarībā no produkta veida. Rezultāts ir aromātisks, sulīgs kūpinājums.</p>
+            <!-- Aizstāj e-pastu ar savu kontaktadresi -->
+            <a class="cta"
+               href="mailto:TAVSEPASTS@PIEMERS.LV?subject=Interese%20par%20majaskupinajumi.lv">
+                Interesē domēna iegāde
+            </a>
 
-<h3>Biežākās kļūdas</h3>
-<ul>
-<li>Nepareiza gaļas sagatavošana – pārāk mitra vai sāļa gaļa</li>
-<li>Pārmērīgi karsti dūmi – gaļa gatavojas un zaudē tekstūru</li>
-<li>Īss kūpināšanas laiks – dūmu aromāts nav pietiekami izteikts</li>
-<li>Sliktas kvalitātes malka – rada nepatīkamu garšu</li>
-</ul>
+            <p class="note">
+                Pārdod tikai domēna vārdu majaskupinajumi.lv.
+                Cena un darījuma nosacījumi — vienojoties.
+            </p>
+        </section>
+    </main>
 
-<h3>Konsultācijas</h3>
-<p>Kā pārtikas tehnologs ar vairāk nekā 30 gadu pieredzi, es palīdzēju mājražotājiem un hobija līmeņa entuziastiem radīt kvalitatīvus kūpinājumus. Konsultācijas ietver:</p>
-<ul>
-<li>Individuālas receptūras un tehnoloģijas izstrādi</li>
-<li>Kūpināšanas metodes, tai skaitā auksto kūpināšanu</li>
-<li>HACCP un pārtikas drošības ieteikumus</li>
-<li>Padomus par iekārtām un optimālu procesu organizēšanu</li>
-</ul>
-
-<p>Ja vēlies apgūt mājas kūpinājumu tehnoloģiju un saņemt profesionālu padomu, raksti WhatsApp vai piesakies konsultācijai.</p>
-</section>
-
-<!-- SERVICES -->
-<section>
-<h2>Konsultācijas virzieni</h2>
-<div class="grid">
-  <div class="card">Produktu izstrāde un receptūras</div>
-  <div class="card">Kūpināšanas tehnoloģijas un dūmi</div>
-  <div class="card">Gaļas konservu ražošana</div>
-  <div class="card">Ražošanas procesa optimizācija</div>
-  <div class="card">HACCP un pārtikas drošība</div>
-  <div class="card">Individuālas konsultācijas WhatsApp / Zoom</div>
-</div>
-</section>
-
-<!-- PRICES -->
-<section>
-<h2>Cenas</h2>
-<div class="grid">
-  <div class="pricing">WhatsApp konsultācija – 30 €</div>
-  <div class="pricing">Konkrētas problēmas analīze – 60 €</div>
-  <div class="pricing">Individuāla receptūra / tehnoloģija – 120–150 €</div>
-</div>
-</section>
-
-<!-- PHOTOS -->
-<section>
-<div class="gallery">
-  <img src="img/photo1.jpg" alt="Mājas kūpinājumi">
-  <img src="img/photo2.jpg" alt="Kūpināta gaļa">
-  <img src="img/photo3.jpg" alt="Kūpināšanas process">
-</div>
-</section>
-
-<!-- CONTACT -->
-<section style="text-align:center;">
-<h2>Sazināties</h2>
-<a class="btn btn-whatsapp" href="https://wa.me/37126987327?text=Vēlos%20konsultāciju">Raksti WhatsApp</a>
-</section>
-
-<footer>
-© 2026 Aivars Rudzītis | IK IESMI | majaskupinajumi.lv  
-<br>Facebook: <a href="https://www.facebook.com/kupinatavas.kupinajumi" style="color:#aaa;">kupinatavas.kupinajumi</a>
-</footer>
-
+    <footer>
+        © majaskupinajumi.lv · Domēna vārds tiek piedāvāts iegādei
+    </footer>
 </body>
 </html>
