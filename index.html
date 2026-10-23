@@ -2,10 +2,9 @@
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pārdošanā majaskupinajumi.lv — atmiņā paliekošs domēna vārds ar potenciālu Latvijas kūpinājumu un mājražotāju tirgū.">
-    <meta name="robots" content="index, follow">
-    <title>majaskupinajumi.lv — Domēns tiek pārdots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>majaskupinajumi.lv — Pārdod domēnu</title>
+    <meta name="description" content="Pārdošanā domēna vārds majaskupinajumi.lv. Sazinies pa tālruni 26987327.">
 
     <style>
         * {
@@ -15,211 +14,98 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #171b18;
-            color: #f8f5ee;
-            line-height: 1.6;
-        }
-
-        .hero {
+            background: #f7f5f0;
+            color: #343a32;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px;
-            background:
-                radial-gradient(ellipse at top, #394437 0%, #202820 45%, #121512 100%);
+            padding: 24px;
         }
 
-        .container {
+        main {
             width: 100%;
-            max-width: 850px;
+            max-width: 620px;
             text-align: center;
-            padding: 55px 35px;
-            border: 1px solid rgba(220, 185, 119, 0.35);
-            border-radius: 18px;
-            background: rgba(15, 19, 16, 0.62);
-            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+            background: #fff;
+            padding: 44px 28px;
+            border-radius: 8px;
+            border: 1px solid #e7e3da;
         }
 
-        .eyebrow {
-            display: inline-block;
-            padding: 8px 18px;
-            border: 1px solid #c6a66b;
-            border-radius: 30px;
-            color: #e5c78f;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        .illustration {
+            font-size: 54px;
+            margin-bottom: 18px;
         }
 
         h1 {
-            margin: 28px 0 10px;
-            font-size: clamp(34px, 7vw, 66px);
-            line-height: 1.1;
+            font-size: clamp(27px, 6vw, 40px);
+            font-weight: 600;
+            margin: 0 0 22px;
             overflow-wrap: anywhere;
-            color: #fffaf0;
         }
 
-        .subtitle {
-            margin: 20px auto;
-            max-width: 650px;
-            font-size: clamp(18px, 3vw, 23px);
-            color: #d8d9ce;
-        }
-
-        .highlight {
-            color: #e5c78f;
+        .status {
+            font-size: 21px;
+            margin: 0 0 14px;
         }
 
         .description {
-            max-width: 620px;
-            margin: 25px auto;
-            color: #c2c8be;
+            color: #6d7169;
             font-size: 16px;
+            line-height: 1.7;
+            margin: 0 auto 28px;
+            max-width: 440px;
         }
 
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-            margin: 38px 0;
-        }
-
-        .benefit {
-            padding: 20px 12px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.045);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .benefit .icon {
-            display: block;
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .benefit strong {
-            display: block;
-            color: #f0d5a3;
-            font-size: 15px;
-        }
-
-        .benefit span:last-child {
-            display: block;
-            margin-top: 6px;
-            color: #b9c0b6;
-            font-size: 13px;
-        }
-
-        .cta {
+        .contact {
             display: inline-block;
-            margin-top: 12px;
-            padding: 16px 32px;
-            border-radius: 8px;
-            background: #c6a66b;
-            color: #171b18;
+            color: #fff;
+            background: #52654a;
             text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background 0.2s, transform 0.2s;
+            padding: 13px 24px;
+            border-radius: 5px;
+            font-size: 19px;
+            font-weight: 600;
         }
 
-        .cta:hover {
-            background: #e5c78f;
-            transform: translateY(-2px);
+        .contact:hover {
+            background: #3f5039;
         }
 
-        .note {
-            margin-top: 22px;
-            color: #9fa79c;
+        .label {
+            margin-top: 12px;
+            color: #85877f;
             font-size: 13px;
         }
 
-        footer {
-            padding: 18px;
-            text-align: center;
-            color: #7f897f;
-            font-size: 12px;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 38px 20px;
-            }
-
-            .benefits {
-                grid-template-columns: 1fr;
-            }
-
-            .benefit {
-                padding: 15px;
+        @media (max-width: 420px) {
+            main {
+                padding: 36px 18px;
             }
         }
     </style>
 </head>
 
 <body>
-    <main class="hero">
-        <section class="container">
-            <span class="eyebrow">Unikāla iespēja uzņēmējiem</span>
+    <main>
+        <div class="illustration" aria-hidden="true">♨️</div>
 
-            <h1>majaskupinajumi<span class="highlight">.lv</span></h1>
+        <h1>majaskupinajumi.lv</h1>
 
-            <p class="subtitle">
-                <span class="highlight">Šis domēna vārds tiek pārdots.</span><br>
-                Iegūsti savu vietu Latvijas kūpinājumu tirgū!
-            </p>
+        <p class="status">Domēna vārds tiek pārdots.</p>
 
-            <p class="description">
-                Mājas kūpinājumi, tradicionālas garšas un vietējo ražotāju
-                produkti ir lieliska niša zīmolam ar skaidru vēstījumu.
-                <strong>majaskupinajumi.lv</strong> ir viegli saprotams,
-                konkrētai nozarei atbilstošs domēna vārds ar potenciālu
-                kļūt par pamatu Tavam nākamajam biznesam internetā.
-            </p>
+        <p class="description">
+            Piemērots nosaukums mājas kūpinājumu ražotājam,
+            pārtikas uzņēmumam vai interneta veikalam Latvijā.
+            Tiek pārdots tikai domēna vārds.
+        </p>
 
-            <div class="benefits">
-                <div class="benefit">
-                    <span class="icon">🎯</span>
-                    <strong>Precīza niša</strong>
-                    <span>Domēns uzreiz pasaka, par ko ir Tavs bizness.</span>
-                </div>
+        <a class="contact" href="tel:+37126987327">
+            ☎ +371 26987327
+        </a>
 
-                <div class="benefit">
-                    <span class="icon">🇱🇻</span>
-                    <strong>Latvijas tirgum</strong>
-                    <span>Vietējam tirgum piemērots .lv domēns.</span>
-                </div>
-
-                <div class="benefit">
-                    <span class="icon">💡</span>
-                    <strong>Biznesa potenciāls</strong>
-                    <span>E-veikalam, mājražotājam vai pārtikas zīmolam.</span>
-                </div>
-            </div>
-
-            <p class="description">
-                Vai meklē piemērotu domēna vārdu savam uzņēmumam?
-                Šī ir iespēja iegādāties domēnu bez mājaslapas,
-                satura vai cita biznesa pārņemšanas.
-            </p>
-
-            <!-- Aizstāj e-pastu ar savu kontaktadresi -->
-            <a class="cta"
-               href="mailto:TAVSEPASTS@PIEMERS.LV?subject=Interese%20par%20majaskupinajumi.lv">
-                Interesē domēna iegāde
-            </a>
-
-            <p class="note">
-                Pārdod tikai domēna vārdu majaskupinajumi.lv.
-                Cena un darījuma nosacījumi — vienojoties.
-            </p>
-        </section>
+        <p class="label">Zvaniet, lai vienotos par cenu.</p>
     </main>
-
-    <footer>
-        © majaskupinajumi.lv · Domēna vārds tiek piedāvāts iegādei
-    </footer>
 </body>
 </html>
